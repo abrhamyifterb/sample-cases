@@ -1,0 +1,31 @@
+[
+    {
+        "id": "https://data.example.org/obs/0001",
+        "type": "Observation",
+        "observationid": "https://data.example.org/reading/0001",
+        "observationtime": "2025-01-20T10:00:00Z",
+        "observedby": ["https://data.example.org/sensor/cz-prg-001"],
+        "observationof": "https://data.example.org/prop/pm25",
+        "observationvalue": ["23.7"]
+    },
+    {
+        "id": "https://data.example.org/obs/0002",
+        "type": ["Observation"],
+        "observationid": "https://data.example.org/reading/0002",
+        "observationtime": "2025-01-20T11:00:00+00:00",
+        "observedby": [
+        "https://data.example.org/sensor/cz-prg-001",
+        "https://data.example.org/sensor/cz-prg-001-backup"
+        ],
+        "observationof": "https://data.example.org/prop/pm10",
+        "observationvalue": ["26.1", "26.0"]
+    },
+    {
+        "id": "https://data.example.org/obs/0003",
+        "type": "Observation",
+        "observationid": "https://data.example.org/reading/0003",
+        "observationtime": "2025-01-20T12:30:45Z",
+        "observedby": ["https://data.example.org/sensor/cz-brn-017"],
+        "observationof": "https://data.example.org/prop/no2"
+    }
+]

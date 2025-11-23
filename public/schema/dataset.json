@@ -1,0 +1,74 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/jp-test//dataset/schema.json",
+    "title": "Datová sada",
+    "description": "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech.",
+    "type": "object",
+    "required": [
+        "id",
+        "type",
+        "publication_year",
+        "title"
+    ],
+    "properties": {
+        "id": {
+        "type": "string",
+        "format": "iri"
+        },
+        "type": {
+        "oneOf": [
+            {
+            "const": "Datová sada"
+            },
+            {
+            "type": "array",
+            "contains": {
+                "const": "Datová sada"
+            },
+            "items": {
+                "type": "string"
+            }
+            }
+        ]
+        },
+        "publication_year": {
+        "title": "publication year",
+        "description": "The year when the item was or will be made publicly available.",
+        "type": "string"
+        },
+        "version": {
+        "title": "version",
+        "description": "The version indicator (name or identifier) of a resource.",
+        "type": "string"
+        },
+        "title": {
+        "title": "title",
+        "description": "A name given to the dataset.",
+        "type": "string"
+        },
+        "has_resource_type": {
+        "title": "has resource type",
+        "description": "A resource type of the Dataset.",
+        "type": "string",
+        "format": "iri"
+        },
+        "has_location": {
+        "title": "has location",
+        "description": "The geographical area covered by the dataset.",
+        "type": "array",
+        "items": {
+            "type": "string",
+            "format": "iri"
+        }
+        },
+        "has_description": {
+        "title": "has description",
+        "description": "Relation to the description of a dataset.",
+        "type": "array",
+        "items": {
+            "type": "string",
+            "format": "iri"
+        }
+        }
+    }
+}

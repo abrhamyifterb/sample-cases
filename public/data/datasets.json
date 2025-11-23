@@ -1,0 +1,35 @@
+[
+    {
+        "id": "https://example.org/dataset/001",
+        "type": "Datová sada",
+        "publication_year": "2023",
+        "version": "1.0",
+        "title": "Global Air Quality Measurements",
+        "has_resource_type": "https://example.org/resource-type/environment",
+        "has_location": [
+            "https://example.org/locations/africa",
+            "https://example.org/locations/europe",
+            "https://example.org/locations/asia"
+        ],
+        "has_description": [
+            "https://example.org/descriptions/air-quality"
+        ]
+    },
+    {
+        "id": "https://example.org/dataset/005",
+        "type": "Datová sada",
+        "publication_year": "2024",
+        "title": "Country Air Quality Measurements",
+        "has_location": ["https://example.org/locations/Czechia"],
+        "has_description": ["https://example.org/descriptions/air-quality-percity"]
+    },
+    {
+        "id": "https://example.org/dataset/009",
+        "type": "Datová sada",
+        "publication_year": "2025",
+        "title": "City Air Quality Measurements",
+        "version": "3.3",
+        "has_location": ["https://example.org/locations/Prague"],
+        "has_description": []
+    }
+]

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/sensors/schema.json",
+  "title": "Observation",
+  "description": "single reading we get from sensor for property at particular time",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "observationid",
+    "observationtime",
+    "observedby",
+    "observationof"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Observation"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Observation"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "observationid": {
+      "title": "observationId",
+      "type": "string",
+      "format": "iri"
+    },
+    "observationtime": {
+      "title": "observationTime",
+      "type": "string",
+      "format": "date-time"
+    },
+    "observedby": {
+      "title": "observedBy",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "URI, IRI, URL",
+        "type": "string",
+        "format": "iri"
+      }
+    },
+    "observationvalue": {
+      "title": "observationValue",
+      "type": "array",
+      "items": {
+        "title": "http://www.w3.org/2001/XMLSchema#double",
+        "type": "string"
+      }
+    },
+    "observationof": {
+      "title": "observationOf",
+      "type": "string",
+      "format": "iri"
+    }
+  }
+}
